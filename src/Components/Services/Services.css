@@ -71,38 +71,83 @@
   transform: scale(1.05);
   transition: 0.4s;
 }
-@media(max-width:768px){
-  .services{
-      align-items: start;
-      gap: 70px;
-      margin: 20px 70px;
-  }
-  .services-title h1{
-      padding: 0;
-      font-size: 50px;
-  }
-  .services-title img{
-      width: 130px;
-      margin-right: -20px;
-  }
-  .services-format{
-      gap: 20px;
-      padding: 32px;
-  }
-  .services-format h2{
-      font-size: 28px;
-  }
-  .services-format p{
-      font-size: 18px;
-      line-height: 32px;
-      max-width: 300px;
-  }
-  .services-readmore{
-      width: 20px;
-  }
-  .services-container{
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+@media (max-width: 768px) {
+  .services {
+      align-items: flex-start; /* Ensures proper alignment for content */
+      gap: 50px; /* Reduced gap for smaller screens */
+      margin: 20px 40px; /* Compact margins for better fit */
   }
 
+  .services-title h1 {
+      padding: 0;
+      font-size: 36px; /* Adjusted font size for readability */
+      text-align: center; /* Centered title for better visual balance */
+  }
+
+  .services-title img {
+      width: 100px; /* Scaled-down image size */
+      margin-right: 0; /* Eliminated negative margin for better alignment */
+  }
+
+  .services-format {
+      gap: 15px; /* Reduced gap for compact layout */
+      padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .services-format h2 {
+      font-size: 24px; /* Scaled font size */
+      text-align: center; /* Centered headings */
+  }
+
+  .services-format p {
+      font-size: 16px; /* Adjusted font size for readability */
+      line-height: 28px; /* Optimized line spacing */
+      max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .services-readmore {
+      width: auto; /* Ensures proper scaling */
+      padding: 10px; /* Added padding for better touch targets */
+      text-align: center; /* Centered button */
+  }
+
+  .services-container {
+      grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+      gap: 20px; /* Reduced gap for compact layout */
+  }
 }
+
+@media (max-width: 480px) {
+  .services {
+      gap: 30px; /* Further reduced gap */
+      margin: 10px 20px; /* Compact margin for very small screens */
+  }
+
+  .services-title h1 {
+      font-size: 28px; /* Smaller font size for smaller devices */
+  }
+
+  .services-title img {
+      width: 80px; /* Reduced image size */
+  }
+
+  .services-format {
+      padding: 15px; /* Compact padding */
+      gap: 10px; /* Reduced gap for tighter layout */
+  }
+
+  .services-format h2 {
+      font-size: 20px; /* Smaller headings for smaller screens */
+  }
+
+  .services-format p {
+      font-size: 14px; /* Adjusted font size */
+      line-height: 24px; /* Optimized line height */
+  }
+
+  .services-readmore {
+      padding: 8px 16px; /* Compact button padding */
+      font-size: 14px; /* Adjusted font size for readability */
+  }
+}
+

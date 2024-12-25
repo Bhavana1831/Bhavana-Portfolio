@@ -79,17 +79,42 @@
     margin-bottom: 50px;
     font-size: 17px;
 }
-@media(max-width:768px){
-    .footer{
-        margin: 50px 70px;
+@media (max-width: 768px) {
+    .footer {
+        margin: 20px 40px; /* Reduced margin for smaller screens */
+        padding: 20px; /* Added padding for better spacing */
     }
-    .footer-top{
+
+    .footer-top {
         flex-direction: column;
-        gap: 50px;
+        gap: 30px; /* Adjusted gap for better spacing */
+        align-items: center; /* Center content for balance */
+        text-align: center; /* Ensures text is centrally aligned */
     }
-    .footer-bottom{
+
+    .footer-bottom {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 50px;
+        gap: 20px; /* Added gap between elements */
+        margin-bottom: 30px; /* Reduced margin for compact layout */
+        align-items: center; /* Centers content for smaller screens */
+        text-align: center; /* Centers text for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin: 10px 20px; /* Compact margin for very small screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .footer-top {
+        gap: 20px; /* Compact gap */
+        text-align: center; /* Ensure alignment remains centered */
+    }
+
+    .footer-bottom {
+        gap: 10px; /* Tightened gap for small devices */
+        margin-bottom: 20px; /* Reduced margin */
     }
 }
