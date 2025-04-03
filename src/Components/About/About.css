@@ -3,55 +3,70 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vw; 
+    gap: 2vw;
     margin: 5vh auto;
+    width: 90%;
+    max-width: 1200px;
     /* border: 2px solid white; */
-
 }
-.about-title{
+
+.about-title {
     position: relative;
     font-size: 60px;
     margin-top: 10px;
+    text-align: center;
+    /* Centered title */
 }
-.about-title h1{
+
+.about-title h1 {
     padding: 0px 30px;
     font-size: 70px;
     font-weight: 600;
 }
-.about-title img{
+
+.about-title img {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -1;
+    max-width: 100%;
 }
-.profile-img{
+
+.profile-img {
     margin-top: 10px;
 }
-.about-sections{
-    /* margin-bottom: 100px; */
+
+.about-sections {
     display: flex;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
     /* border: 2px solid white; */
+}
 
-}  
-.about-left{
+.about-left {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    /* border: 2px solid white; */
     padding-top: 40px;
     padding-left: 30px;
-
+    width: 45%;
+    /* Set width for better alignment */
+    min-width: 300px;
 }
-.about-right{
+
+.about-right {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    /* border: 2px solid white; */
     padding: 40px;
+    width: 45%;
+    /* Set width for balance */
+    min-width: 300px;
 }
-.about-para{
+
+.about-para {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -60,67 +75,165 @@
     text-align: justify;
     line-height: 40px;
 }
-.about-skills{
+
+.about-skills {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.about-skill{
+
+.about-skill {
     display: flex;
     gap: 50px;
     align-items: center;
     transition: 0.3s;
 }
-.about-skill p{
+
+.about-skill p {
     min-width: 150px;
     font-size: 20px;
     font-weight: 500;
     text-align: start;
 }
-.about-skill hr{
+
+.about-skill hr {
     outline: none;
     border: none;
     width: 50%;
     height: 8px;
     border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%,#B415FF 106.28%);
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
 }
-.about-skill:hover{
+
+.about-skill:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
-@media(max-width:768px){
-    .about{
-        gap: 80px;
-        margin: 50px 70px;
-        align-items: start;
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    .about {
+        gap: 50px;
+        margin: 40px auto;
     }
-    .about-title h1{
+
+    .about-title h1 {
         font-size: 50px;
-        padding: 0;
+        text-align: center;
     }
-    .about-title img{
-        width: 130px;
-        right: -20px;
-    }
-    .about-sections{
+
+    .about-sections {
         flex-direction: column;
+        align-items: center;
+        gap: 30px;
     }
-    .about-left{
-        display: none;
+
+    .about-left,
+    .about-right {
+        width: 90%;
+        /* Full width for smaller screens */
+        text-align: center;
     }
-    .about-para{
+}
+
+@media (max-width: 768px) {
+    .about {
+        gap: 40px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .about-title h1 {
+        font-size: 45px;
+    }
+
+    .about-title img {
+        width: 100px;
+    }
+
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-left {
+        display: flex;
+        /* Ensure it's visible */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-para {
         font-size: 18px;
         line-height: 32px;
     }
-    .about-skill{
+
+    .about-skill {
         gap: 20px;
         align-items: center;
     }
-    .about-para p{
-        font-size: 20px;
+
+    .about-para p {
+        font-size: 18px;
     }
-    .about-skill hr{
+
+    .about-skill hr {
         height: 6px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        gap: 30px;
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 15px;
+    }
+
+    .about-title h1 {
+        font-size: 35px;
+    }
+
+    .about-title img {
+        width: 80px;
+    }
+
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about-left {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .about-para {
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+    }
+
+    .about-skill {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-skill p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .about-skill hr {
+        height: 5px;
+        width: 80%;
     }
 }

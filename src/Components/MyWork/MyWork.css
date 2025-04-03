@@ -1,50 +1,57 @@
-.mywork{
+.mywork {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
     margin: 5vh auto;
-    /* border: 2px solid white; */
 }
-.mywork-title{
+
+.mywork-title {
     position: relative;
     margin-top: -10px;
+    text-align: center;
 }
-.mywork-title h1{
+
+.mywork-title h1 {
     padding: 0px 30px;
     font-size: 60px;
     font-weight: 600;
 }
-.mywork-title img{
+
+.mywork-title img {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -1;
+    max-width: 100%;
 }
-.mywork-container{
+
+.mywork-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 5vw;
     padding: 5px 40px 5px;
-    /* border: 2px solid white; */
+    justify-content: center;
 }
-.mywork-container img{
+
+.mywork-container img {
     width: 100%;
     height: auto;
-    max-width: 100%; /* Ensure images fill the container */
+    max-width: 100%;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
-    /* padding: 50px; */
 }
-.mywork-container img:hover{
+
+.mywork-container img:hover {
     transform: scale(1.10);
     border: 2px solid #ff00ff;
     border-radius: 10px;
     transition: 0.3s;
 }
-.mywork-showmore{
+
+.mywork-showmore {
     display: flex;
     gap: 15px;
     border-radius: 50px;
@@ -56,71 +63,69 @@
     transition: 0.6s;
     cursor: pointer;
 }
-.mywork-showmore:hover{
+
+.mywork-showmore:hover {
     gap: 30px;
     transition: 0.6s;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
     .mywork {
-        gap: 30px;
-        margin: 20px 40px; /* Reduced margin for smaller screens */
-        align-items: flex-start; /* Ensures alignment adapts to content */
+        gap: 50px;
     }
 
     .mywork-title h1 {
-        padding: 0;
-        font-size: 36px; /* Adjusted font size for smaller screens */
-        font-weight: 600;
-        text-align: center; /* Center text for better readability */
-    }
-
-    .mywork-title img {
-        width: 100px; /* Scaled-down image for smaller screens */
-        margin-right: -10px; /* Adjusted margin for better alignment */
+        font-size: 50px;
     }
 
     .mywork-container {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        gap: 20px; /* Reduced gap for compact design */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mywork {
+        gap: 30px;
+        margin: 20px 40px;
+        align-items: center;
     }
 
-    .mywork-container img {
-        width: 100%; /* Ensures image responsiveness */
-        height: auto; /* Maintains aspect ratio */
-        object-fit: cover; /* Enhances image display */
+    .mywork-title h1 {
+        font-size: 36px;
+        text-align: center;
     }
 
-    .mywork-showmore {
-        padding: 15px 30px; /* Adjusted padding */
-        font-size: 16px; /* Slightly smaller font */
-        margin: 30px auto; /* Reduced margin for consistency */
-        cursor: pointer;
-        text-align: center; /* Centers the button text */
+    .mywork-title img {
+        width: 100px;
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .mywork {
         gap: 20px;
-        margin: 10px 20px; /* Further reduced margin for very small screens */
+        margin: 10px 20px;
     }
 
     .mywork-title h1 {
-        font-size: 28px; /* Scaled font for smaller screens */
+        font-size: 28px;
     }
 
     .mywork-title img {
-        width: 80px; /* Smaller image size */
-        margin-right: 0; /* Eliminated negative margin for alignment */
+        width: 80px;
     }
 
     .mywork-container {
-        grid-template-columns: 1fr; /* Ensures single-column layout */
-        gap: 15px; /* Compact spacing */
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .mywork-showmore {
-        padding: 10px 20px; /* Compact button padding */
-        font-size: 14px; /* Adjusted font size */
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
